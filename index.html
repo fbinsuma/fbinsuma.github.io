@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  background-color: #89869c;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url('./assets/Untitled\ design.png');
+
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax_2{
+  background-image: url("./assets/FATIMA.png");
+
+  /* Full height */
+  height: 100%; 
+  width: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.caption{
+  position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+}
+
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+</style>
+</head>
+<body>
+
+
+  <div class="parallax">
+    <div class="caption">
+      <h1>Fatima Bin Sumait</h1>
+    </div>
+  </div>
+  
+  <div class="parallax_2">
+  </div>
+  
+  <div class="parallax"></div>
+
+
+
+</body>
+</html>
