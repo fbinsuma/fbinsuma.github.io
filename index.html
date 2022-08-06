@@ -3,69 +3,175 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;1,200&display=swap');
 body, html {
   height: 100%;
-  background-color: #89869c;
+  background-color: #72619A;
+  scroll-behavior: smooth;
+  font-family:'Poppins';
 }
 
-.parallax {
-  /* The image used */
-  background-image: url('./assets/Untitled\ design.png');
 
-  /* Full height */
-  height: 100%; 
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.parallax_2{
-  background-image: url("./assets/FATIMA.png");
-
-  /* Full height */
-  height: 100%; 
+section{
+  position: relative;
   width: 100%;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 100%;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.caption{
+section::before{
+  content: '';
   position: absolute;
-    left: 0;
-    top: 50%;
-    width: 100%;
-    text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #72619A, transparent);
 }
 
-/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
-@media only screen and (max-device-width: 1366px) {
-  .parallax {
-    background-attachment: scroll;
-  }
+section img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
+
+#text{
+  position: absolute;
+  color: #72619A;
+  white-space: nowrap;
+  font-size: 7.5vw;
+  z-index: 9;
+}
+
+#mout
+
+.parallax{
+  position: relative;
+  padding: 100px;
+  background: #72619A;
+}
+
+.parallax h2{
+  font-size: 10em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.parallax p{
+  font-size: 5em;
+  color: #fff;
+}
+
+#front-mountains{
+  z-index: 10;
+}
+
+
 </style>
 </head>
 <body>
 
+  <section>
+    <img src="./assets/web background-fill.png" id="sky">
+    <img src="./assets/web mountains.png" id="mountains">
+    <h1 id="text">Fatima Bin Sumait</h1>
+    <img src="./assets/web birds.png" id="birds"> 
+    <img src="./assets/web boat.png" id="boats"> 
+    <img src="./assets/web mountain-front.png" id="front-mountains">
+    
+
+  </section>
 
   <div class="parallax">
-    <div class="caption">
-      <h1>Fatima Bin Sumait</h1>
-    </div>
-  </div>
-  
-  <div class="parallax_2">
-  </div>
-  
-  <div class="parallax"></div>
+    <h2>ETA Tool</h2>
+    <p>The ETA Tool is a web app created in hopes to bringing Calgary close to Vision Zero by displaying to the user that lower speed
+      limits minimally impact you commute time while reducing casualties. The app compiled the City data and brough it into visualization.
+      This tool helped inform Calgarians that reducing the speed limit can save lives without affecting commuting.
+      
+      Tools Used: Javascript, HTML, CSS, GIS
+      </p>
+    <h2>Project 2</h2>
+    <p>It is quite a task thinking up great made-up words that are unique, 
+      so I created this word generator to help you come up with the best fake 
+      word ideas. They can be great for naming your website, business, product 
+      or project. Fake words or pseudowords are words which look like they are 
+      real, but actually have no meaning. They are easy to pronounce, and this 
+      also helps to make them sound like they are real. Pseudowords have been 
+      around ever since our brain evolved the ability to process language, it 
+      is probably how all our modern day words came into being. A language has 
+      a lot of sounds called phonemes which when used in various combinations, 
+      you can create relatable sounds that do not have any meaning behind them, 
+      this is where a meaning could be attached to a sound to create a new word.</p>
 
+      <p>This fake word generator will generate all kinds of words, some put words 
+      together, others are totally new! You can also keep a short list of fake 
+      words that you like by clicking on that word in the list under the generator 
+      named 'fake words generated'. If you have a fake word you would like to add 
+      to the fake word generator contact us and we will add it to the list.</p>
+    <h2>Project 3</h2>
+    <p>It is quite a task thinking up great made-up words that are unique, 
+      so I created this word generator to help you come up with the best fake 
+      word ideas. They can be great for naming your website, business, product 
+      or project. Fake words or pseudowords are words which look like they are 
+      real, but actually have no meaning. They are easy to pronounce, and this 
+      also helps to make them sound like they are real. Pseudowords have been 
+      around ever since our brain evolved the ability to process language, it 
+      is probably how all our modern day words came into being. A language has 
+      a lot of sounds called phonemes which when used in various combinations, 
+      you can create relatable sounds that do not have any meaning behind them, 
+      this is where a meaning could be attached to a sound to create a new word.</p>
+
+      <p>This fake word generator will generate all kinds of words, some put words 
+      together, others are totally new! You can also keep a short list of fake 
+      words that you like by clicking on that word in the list under the generator 
+      named 'fake words generated'. If you have a fake word you would like to add 
+      to the fake word generator contact us and we will add it to the list.</p>
+    <h2>Project 4</h2>
+    <p>It is quite a task thinking up great made-up words that are unique, 
+      so I created this word generator to help you come up with the best fake 
+      word ideas. They can be great for naming your website, business, product 
+      or project. Fake words or pseudowords are words which look like they are 
+      real, but actually have no meaning. They are easy to pronounce, and this 
+      also helps to make them sound like they are real. Pseudowords have been 
+      around ever since our brain evolved the ability to process language, it 
+      is probably how all our modern day words came into being. A language has 
+      a lot of sounds called phonemes which when used in various combinations, 
+      you can create relatable sounds that do not have any meaning behind them, 
+      this is where a meaning could be attached to a sound to create a new word.</p>
+
+      <p>This fake word generator will generate all kinds of words, some put words 
+      together, others are totally new! You can also keep a short list of fake 
+      words that you like by clicking on that word in the list under the generator 
+      named 'fake words generated'. If you have a fake word you would like to add 
+      to the fake word generator contact us and we will add it to the list.</p>
+  </div>
+
+
+
+<script>
+  let sky = document.getElementById('sky');
+  let mountains = document.getElementById('mountains');
+  let birds = document.getElementById('birds');
+  let boats = document.getElementById('boats');
+  let text = document.getElementById('text');
+
+window.addEventListener('scroll', function(){
+
+let value = window.scrollY;
+// boats.style.left = value + 0.25 + 'px';
+birds.style.left = - value * 7 + 'px';
+boats.style.left = -value * 6 + 'px';
+text.style.top = value * .5 + 'px';
+
+})
+
+</script>
 
 
 </body>
