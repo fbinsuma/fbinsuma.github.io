@@ -2,11 +2,13 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;1,200&display=swap');
 body, html {
   height: 100%;
-  background-color: #72619A;
+  min-height: 100vh;
+  background: linear-gradient(#370065, #270046);
   scroll-behavior: smooth;
   font-family:'Poppins';
 }
@@ -16,7 +18,7 @@ section{
   position: relative;
   width: 100%;
   height: 100%;
-  padding: 50px;
+  padding: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,7 +30,7 @@ section::before{
   bottom: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to top, #72619A, transparent);
+  background: linear-gradient(to top, #270046, transparent);
 }
 
 section img{
@@ -40,63 +42,116 @@ section img{
   object-fit: cover;
 }
 
-
-#text{
-  position: absolute;
-  color: #72619A;
-  white-space: nowrap;
-  font-size: 7.5vw;
-  z-index: 9;
+section img#moon{
+  mix-blend-mode: screen;
 }
 
-#mout
+#text{
+  left: 200px;
+  bottom: 100px;
+  position: absolute;
+  color: #ffffff;
+  white-space: nowrap;
+  font-size: 5vw;
+  z-index: 10;
+}
+
 
 .parallax{
   position: relative;
   padding: 100px;
-  background: #72619A;
+  background: #270046;
 }
 
 .parallax h2{
-  font-size: 10em;
+  font-size: 3.5em;
   color: #fff;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .parallax p{
-  font-size: 5em;
+  font-size: 1em;
   color: #fff;
 }
 
-#front-mountains{
+#front-buildings{
   z-index: 10;
 }
 
+header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 50px 100;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 10000;
+}
+
+header ul{
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header ul li{
+  list-style: none;
+  margin-left: 20px;
+  
+}
+
+
+
+header ul li a{
+  text-decoration: none;
+  padding: 10px 45px;
+  color: white;
+  border-radius: 20px;
+}
+
+header ul li a:hover, 
+header ul li a .active{
+ background: #fff;
+ color: #270046;
+}
 
 </style>
 </head>
 <body>
 
-  <section>
-    <img src="./assets/web background-fill.png" id="sky">
-    <img src="./assets/web mountains.png" id="mountains">
-    <h1 id="text">Fatima Bin Sumait</h1>
-    <img src="./assets/web birds.png" id="birds"> 
-    <img src="./assets/web boat.png" id="boats"> 
-    <img src="./assets/web mountain-front.png" id="front-mountains">
-    
+  <header>
+    <ul>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">About Me</a></li>
+      <li><a href="#MyWork">My Work</a></li>
+      <li><a>Contact Me</a></li>
+    </ul>  
+  </header>
 
+  <section>
+    <img src="./assets/sky.png" id="sky">
+    <img src="./assets/moon.png" id="moon">
+    <img src="./assets/back-buildings.png" id="back_buildings"> 
+    <h1 id="text">Fatima Bin Sumait</h1>
+    <img src="./assets/front-buildings.png" id="front_buildings"> 
   </section>
 
-  <div class="parallax">
+  <div class="parallax" id="MyWork">
     <h2>ETA Tool</h2>
-    <p>The ETA Tool is a web app created in hopes to bringing Calgary close to Vision Zero by displaying to the user that lower speed
-      limits minimally impact you commute time while reducing casualties. The app compiled the City data and brough it into visualization.
-      This tool helped inform Calgarians that reducing the speed limit can save lives without affecting commuting.
+    <h4>UI/UX designer and web developer</h4>
+    <p>The ETA Tool all began when me and 3 of my classmates joing the Calgary Hackathon 2019. The hackthone was two days event and the topic was
+      padestrain safety. We came up with the idea of creating a tool that would bring teh City of Calgary to Vision Zero goal. The web tool visualizaed
+      to the end user that speed reduction can have minial affect on your cmmute but can saves many lives as it can reduce the force of collision. After creating a demo tool for the hacthone the City of Calgary contact us to develope the tool as the City was looking for an app that
+      can help both the CIty engineers and the public to visiualize those speed reduction changes.
       
-      Tools Used: Javascript, HTML, CSS, GIS
+      <br>For this tool we created a website using Javascript, HTML and CSS so it can be accessible to as many people. We also use GIS to compile and compress
+    the city data to have a fast user experince.<br>
       </p>
-    <h2>Project 2</h2>
+    <h2>Camrose boys and girls club</h2>
+    <h4>Lead web developer</h4>
     <p>It is quite a task thinking up great made-up words that are unique, 
       so I created this word generator to help you come up with the best fake 
       word ideas. They can be great for naming your website, business, product 
@@ -156,18 +211,18 @@ section img{
 
 <script>
   let sky = document.getElementById('sky');
-  let mountains = document.getElementById('mountains');
-  let birds = document.getElementById('birds');
-  let boats = document.getElementById('boats');
+  let moon = document.getElementById('moon');
+  let back_buildings = document.getElementById('back_buildings');
+  let front_buildings = document.getElementById('front_buildings');
   let text = document.getElementById('text');
 
 window.addEventListener('scroll', function(){
 
 let value = window.scrollY;
-// boats.style.left = value + 0.25 + 'px';
-birds.style.left = - value * 7 + 'px';
-boats.style.left = -value * 6 + 'px';
-text.style.top = value * .5 + 'px';
+sky.style.left = - value * 0.5 + 'px';
+moon.style.top = value * 3 + 'px';
+front_buildings = value * 0 + 'px';
+text.style.marginLeft = value * 3 + 'px';
 
 })
 
